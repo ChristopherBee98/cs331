@@ -1,0 +1,18 @@
+(*Question 1a*)
+(*fun stuff f base [] = base:(int->int) |
+stuff f base a::b = f(a,(stuff f base b));*)
+(*Question 1b*)
+fun inc x = inc (x + 1);
+(*Question 1c*)
+fun in1 0 = 0 |
+in1 x = in1(x + 1);
+(*Question 1d*)
+fun temp x = x + (x 0);
+(*Question 1e*)
+fun temp2 x = (x 0) + (x 1);
+(*Question 1f*)
+fun squash [] = [] |
+squash ({a,b}::c) = ((a+b):int)::(squash c);
+(*Question 1g*)
+fun arbsquash f [] = [] |
+arbsquash f ({a,b}::c) = ((f a b)::(arbsquash f c));

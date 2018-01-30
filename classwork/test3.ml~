@@ -1,0 +1,11 @@
+val list = [1, 2, 3, 4];
+datatype ops = PLUS | MINUS | TIMES | DIV;
+datatype calctree = LEAF of int | CALC of ops * calctree * calctree;
+
+fun calcValue (CALC(operation, LEAF(x), LEAF(y))) =
+if operation = PLUS then x + y
+else if operation = MINUS then x - y
+else if operation = TIMES then x * y
+else x div y;
+
+calcValue(CALC(TIMES, LEAF(30), LEAF(87)));

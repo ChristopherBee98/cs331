@@ -1,0 +1,8 @@
+structure Set :> SET = struct
+type set = int list;
+val empty = [];
+fun insert (x, l) = x::l;
+fun member (x, []) = false |
+member (x, a::l) = if (x = a) then true
+else member(x, l);
+end;
